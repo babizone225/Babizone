@@ -1,0 +1,47 @@
+BABIZONE - ABIDJAN MILITIA
+==========================
+
+LANCER SUR PC (Windows)
+  1. pip install pygame-ce
+  2. dans ce dossier :  python main.py
+
+COMMANDES (PC)
+  Joueur 1 : Z/Q/D (ou W/A/D) ou fleches = bouger | Z / W / Espace = sauter puis voler (jet-pack)
+             souris = viser | clic gauche = tirer | R = recharger | E ou clic droit = changer d'arme
+             G = RAMASSER l'arme au sol (invite affichee au-dessus de l'arme)
+  Joueur 2 (multi local) : fleches = bouger / voler | O et P = tourner la visee | L = inverser
+             Ctrl droit ou Entree = tirer | Maj droit = recharger | M = arme | N = ramasser
+
+BUTIN D'ARMES
+  Un joueur elimine laisse tomber son arme la plus puissante (avec ses munitions).
+  Approche-toi et appuie sur G (ou le bouton PRENDRE sur mobile) : tu echanges avec ton arme actuelle,
+  qui tombe a son tour au sol. Meme arme = tu recuperes des munitions. Les bots ramassent aussi.
+
+SON
+  Parametres > Effets sonores / Musique. Les sons sont positionnels (un tir lointain est plus faible
+  et vient du bon cote). Les fichiers sont dans le dossier sounds/ (OGG). Pour les modifier ou les
+  regenerer :  pip install numpy  puis  python make_sounds.py   (necessite ffmpeg pour les .ogg)
+
+MOBILE / ECRAN TACTILE
+  Le jeu detecte le tactile automatiquement (ou : Parametres > Commandes tactiles > Toujours,
+  pratique pour tester l'interface a la souris sur PC).
+    stick gauche : gauche/droite = courir, vers le haut = voler
+    stick droit  : direction = viser, pousse a fond = tir automatique
+    boutons      : R recharger | ARME changer | PRENDRE ramasser | II pause
+  Le clavier a l'ecran s'ouvre quand on touche le champ Pseudo.
+
+  Tester sur un telephone (version navigateur, Android ET iPhone) :
+    pip install pygbag
+    puis, depuis le dossier PARENT de "babizone" :   pygbag --bind 0.0.0.0 babizone
+    ouvre ensuite  http://ADRESSE_IP_DU_PC:8000  sur le telephone (meme Wi-Fi).
+    (adresse IP du PC : commande ipconfig ; autorise Python dans le pare-feu Windows)
+    Si --bind n'est pas reconnu :  pygbag --help
+  Limites de la version navigateur : pas de multijoueur en ligne ; premier chargement un peu long ;
+  il faut toucher l'ecran une fois pour activer le son (regle des navigateurs).
+
+MULTIJOUEUR EN LIGNE (PC uniquement)
+  Jouer > Multi en ligne > Heberger : le jeu affiche un code d'invitation a donner a tes amis.
+  Meme Wi-Fi : direct. Via Internet : redirige le port TCP 50505 de ta box (ou utilise Tailscale / ZeroTier).
+
+QUALITE GRAPHIQUE
+  settings.py : SUPERSAMPLE = 2 (joli) ou 1 (plus rapide si le jeu ralentit).

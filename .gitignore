@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+babizone_profil.json
+babizone_erreur.txt
+.vscode/
+.idea/

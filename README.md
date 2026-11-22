@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🇨🇮 Babizone — Abidjan Militia
 
 Jeu de tir 2D en vue de côté, inspiré de Mini Militia, dans l'ambiance d'Abidjan : jet-pack, visée à 360°,
@@ -34,3 +35,7 @@ Même Wi-Fi : direct. À distance : utilise un VPN gratuit (Radmin VPN, Tailscal
 Python 3 + [pygame-ce](https://pyga.me). Les sons sont générés par `make_sounds.py`.
 La version navigateur est construite avec [pygbag](https://pygame-web.github.io), le `.exe` avec PyInstaller
 (voir `.github/workflows/`).
+=======
+# Babizone
+jeu de tir version CI 
+>>>>>>> cdadba68212e03895888b2223cad94e20ffe73e9
